@@ -99,7 +99,7 @@ ndvi_clamped <- terra::clamp(
 #---------------------
 
 breaks <- classInt::classIntervals(
-    ndvi_clamped,
+    terra::values(ndvi_clamped),
     n = 7,
     style = "equal"
 )$brks
